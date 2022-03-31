@@ -25,16 +25,15 @@ html {
 }
 
 :root {
-  --fs--2: clamp(0.96rem, calc(0.63rem + 0.47vw), 0.72rem);
-  --fs--1: clamp(1.2rem, calc(0.78rem + 0.59vw), 0.9rem);
-  --fs-0: clamp(1.13rem, calc(0.98rem + 0.73vw), 1.5rem);
-  --fs-1: clamp(1.41rem, calc(1.22rem + 0.91vw), 1.88rem);
-  --fs-2: clamp(1.76rem, calc(1.53rem + 1.14vw), 2.34rem);
-  --fs-3: clamp(2.2rem, calc(1.91rem + 1.43vw), 2.93rem);
-  --fs-4: clamp(2.75rem, calc(2.39rem + 1.79vw), 3.66rem);
-  --fs-5: clamp(3.43rem, calc(2.99rem + 2.23vw), 4.58rem);
-  --fs-6: clamp(4.29rem, calc(3.73rem + 2.79vw), 5.72rem);
-  --fs-7: clamp(5.36rem, calc(4.67rem + 3.49vw), 7.15rem);
+  --fs--2: clamp(0.96rem, calc(0.72rem + 0.33vw), 0.79rem);
+  --fs--1: clamp(1.2rem, calc(0.77rem + 0.61vw), 0.89rem);
+  --fs-0: clamp(1rem, calc(0.8rem + 0.98vw), 1.5rem);
+  --fs-1: clamp(1.13rem, calc(0.83rem + 1.46vw), 1.88rem);
+  --fs-2: clamp(1.27rem, calc(0.84rem + 2.1vw), 2.34rem);
+  --fs-3: clamp(1.42rem, calc(0.84rem + 2.94vw), 2.93rem);
+  --fs-4: clamp(1.6rem, calc(0.8rem + 4.02vw), 3.66rem);
+  --fs-5: clamp(1.8rem, calc(0.72rem + 5.42vw), 4.58rem);
+  --fs-6: clamp(2.03rem, calc(0.59rem + 7.21vw), 5.72rem);
 }
 
 html,
@@ -121,12 +120,14 @@ h1 {
   left: 0;
   width: 100%;
   z-index: 1000;
-  mix-blend-mode: exclusion;
+  mix-blend-mode: difference;
+  /* background: #fff; */
+  backdrop-filter: blur(1rem);
 }
 
 .header-ctn,
 .footer-ctn {
-  min-height: 100px;
+  min-height: 72px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -144,6 +145,7 @@ footer a {
   text-decoration: none;
   color: inherit;
   font-size: var(--fs--2);
+  /* letter-spacing: 0.2px; */
 }
 
 .header-ctn .cta {
@@ -160,7 +162,7 @@ footer a {
 
 .header-ctn nav {
   flex: 1;
-  display: flex;
+  display: none;
   justify-content: flex-end;
 }
 
@@ -171,7 +173,7 @@ footer a {
 
 .header-ctn nav li a,
 .footer-ctn ul li a {
-  font-weight: bold;
+  /* font-weight: bold; */
   padding-inline: 0.5rem;
 }
 
@@ -312,6 +314,10 @@ footer {
   .canvas-ctn {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .header-ctn nav {
+    display: flex;
   }
 
   .header-ctn nav {
