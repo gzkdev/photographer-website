@@ -1,6 +1,13 @@
 @font-face {
   font-family: Satoshi;
-  src: url(./assets/fonts/Satoshi-Variable.ttf);
+  src: url(./assets/fonts/Satoshi-Regular.woff);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Satoshi;
+  src: url(./assets/fonts/Satoshi-Bold.woff);
+  font-weight: bold;
 }
 
 html {
