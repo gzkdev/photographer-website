@@ -220,9 +220,25 @@ main {
 }
 
 .work-ctn > div {
-  display: grid;
+  display: flex;
   gap: 1rem;
   margin-bottom: 3rem;
+}
+
+.work-ctn > div > span {
+  padding: 10px 14px;
+  text-align: center;
+  aspect-ratio: 1;
+  display: block;
+  font-size: var(--fs--2);
+  background: #dadada;
+  align-self: flex-start;
+  border-radius: 50%;
+}
+
+.work-ctn > div > div {
+  display: grid;
+  gap: 0.5rem;
 }
 
 .gallery {
@@ -311,6 +327,10 @@ footer {
 @media (min-width: 1200px) {
   .canvas-ctn {
     grid-template-rows: repeat(auto-fit, minmax(320px, 1fr));
+  }
+
+  .work-ctn > div {
+    margin-bottom: 0rem;
   }
 
   .gallery-box:nth-child(2n) {
